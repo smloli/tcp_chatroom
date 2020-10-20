@@ -1,5 +1,6 @@
 import socket
 import threading
+
 def new_thread(new_client,ip_port):
     while True:
         recv_data = new_client.recv(1024)
@@ -17,6 +18,7 @@ def new_thread(new_client,ip_port):
                 send_data = f'{ip_port}:{recv_content}\n'
                 send_content = send_data.encode('utf-8')
                 i.send(send_content)
+
 if __name__=='__main__':
     client_dict = {}
     # 创建套接字
