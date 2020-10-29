@@ -23,7 +23,7 @@ if __name__=='__main__':
     client_dict = {}
     # 创建套接字
     tcp_server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    # 复用端口,使之进程关闭，立即释放端口
+    # 复用端口,使进程关闭，立即释放端口
     tcp_server.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,True)
     # 绑定端口
     tcp_server.bind(('',3344))
